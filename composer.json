@@ -1,0 +1,15 @@
+{
+    "name": "developer/teste-para-estagio",
+    "authors": [
+        {
+            "name": "Miguel Veloso Garcia",
+            "email": "mvelosogarcia@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4" : {
+          "app\\": "app/"
+        }
+    }
+}
