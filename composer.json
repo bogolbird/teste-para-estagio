@@ -6,7 +6,9 @@
             "email": "mvelosogarcia@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "twig/twig": "^1.42"
+    },
     "autoload": {
         "psr-4" : {
           "app\\": "app/"
