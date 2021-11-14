@@ -6,3 +6,52 @@
 .navbar-nav{
   margin: 0 auto;
 }
+
+.center{
+  margin: 0 auto;
+}
+
+body{
+  background-color: #00BFFF;
+}
+
+.bg-white{
+  background-color: #FFFFFF;
+}
+
+.padding{
+  padding: 10px;
+  color: #000;
+}
+
+.direita{
+  border-style: solid;
+  border-left-width: 1px;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.divcadas{
+  width: 94%;
+  height: 50%;
+  margin-top: 50px;
+  border-radius: 10px;
+  margin-left: 50px;
+  background-color: gray;
+}
+
+.txtcadas{
+  border-radius: 5px;
+  height: 20px;
+  width: 70%;
+  margin: 12px;
+}
+
+.margin-l{
+  margin-left: 10px;
+}
+
+.margin-b{
+  margin-bottom: 10px;
+}

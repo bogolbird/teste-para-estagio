@@ -3,7 +3,18 @@
 {% block title %}Home{% endblock %}
 
 {% block body %}
-<div>
-  <h1>TESTE</h1>
+<div class="max-width center bg-white padding">
+  <table class="max-width">
+    <tr>
+      <th>
+        Nome
+      </th>
+      <th class="direita">
+        Email
+      </th>
+    </tr>
+  </table>
+  <hr>
+  <a href="{{BASE}}cadastro/"  class="btn btn-info btn-sm">Cadastro</a>
 </div>
 {% endblock %}

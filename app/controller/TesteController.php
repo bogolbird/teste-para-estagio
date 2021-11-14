@@ -4,7 +4,7 @@
   class TesteController extends Controller
   {
     public function index(){
-      $this->load('home/main', ['nome' => 'miguel']);
+      $this->load('home/main');
     }
   }
 ?>

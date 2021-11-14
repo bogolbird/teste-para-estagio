@@ -65,9 +65,16 @@
             if(is_callable($get['call'])){
               $get['call']();
               break;
+            }else{
+              $this->executeController($get['call']);
             }
           }
         }
+      }
+
+      private function executeController($get)
+      {
+        $ex = explode('@', $get);
       }
 
       private function normalizeURI($arr)
