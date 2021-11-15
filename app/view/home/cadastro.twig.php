@@ -8,15 +8,15 @@
 
     <hr>
 
-    <form action="{{BASE}}insert-cadastro/" method="post">
+    <form action="{{BASE}}insert" method="post">
 
         <div class="mt-3">
             <label for="name">Insara seu Nome</label>
-            <input type="text" id="name" class="form-control" placeholder="Nome" required/>
+            <input type="text" id="nome" name="nome" class="form-control" placeholder="Nome" required/>
         </div>
         <div class="mt-3">
             <label for="email">Insira seu Email</label>
-            <input type="text" id="email" class="form-control" placeholder="Email" required/>
+            <input type="text" id="email" name="email" class="form-control" placeholder="Email" required/>
         </div>
 
         <div class="mt-3 text-right">

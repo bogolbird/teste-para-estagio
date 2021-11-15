@@ -16,5 +16,7 @@
   </table>
   <hr>
   <a href="{{BASE}}cadastro/"  class="btn btn-info btn-sm">Cadastro</a>
+
+  <a href="{{BASE}}sorteio/"  class="btn btn-info btn-sm">Sorteio</a>
 </div>
 {% endblock %}

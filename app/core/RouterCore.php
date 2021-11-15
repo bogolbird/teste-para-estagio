@@ -21,6 +21,9 @@
         $this->method = $_SERVER['REQUEST_METHOD'];
         $uri = $_SERVER['REQUEST_URI'];
 
+        if (strpos($uri, '?'))
+          $uri = mb_substr($uri, 0, strpos($uri, '?'));
+
         $ex = explode('/', $uri);
         $uri = $this->normalizeURI($ex);
 
@@ -41,17 +44,25 @@
         ];
       }
 
+      private function post($router, $call)
+      {
+        $this->getArr[] = [
+            'router' => $router,
+            'call' => $call
+        ];
+      }
+
       private function execute()
       {
-        switch ($this->method){
-          case 'GET':
-            $this->executeGet();
-            break;
-          case 'POST':
-
-            break;
+        switch ($this->method) {
+            case 'GET':
+                $this->executeGet();
+                break;
+            case 'POST':
+                $this->executePost();
+                break;
+          }
         }
-      }
 
       private function executeGet()
       {
@@ -68,6 +79,26 @@
             }else{
               $this->executeController($get['call']);
             }
+          }
+        }
+      }
+
+      private function executePost()
+      {
+        foreach ($this->getArr as $get) {
+          $r = substr($get['router'], 1);
+
+          if (substr($r, -1) == '/') {
+              $r = substr($r, 0, -1);
+          }
+
+          if ($r == $this->uri) {
+            if (is_callable($get['call'])) {
+                $get['call']();
+                return;
+            }
+
+            $this->executeController($get['call']);
           }
         }
       }
